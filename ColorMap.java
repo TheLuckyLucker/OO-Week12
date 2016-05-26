@@ -1,4 +1,4 @@
-package mandelmodel;
+package mandelbrotfx;
 
 import javafx.scene.paint.Color;
 
