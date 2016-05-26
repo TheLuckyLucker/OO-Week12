@@ -58,6 +58,10 @@ public class AreaFiller {
 
     }  
     
+    public int getZoom(){
+        return this.zoomfactor;
+    }
+    
 
 
 }

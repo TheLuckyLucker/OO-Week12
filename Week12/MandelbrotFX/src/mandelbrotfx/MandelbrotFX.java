@@ -43,14 +43,20 @@ public class MandelbrotFX extends Application {
             }
         });
         
-        canvas.setOnMouseClicked(event -> {
 
-            System.out.println("test");
-        });
         
         Area area = new Area(-2.5, 2.5, 5, 5);
         AreaFiller areaFiller = new AreaFiller(area  );
 
+        canvas.setOnMouseClicked(event -> {
+            if(event.isShiftDown()){
+                areaFiller.fill(canvas, areaFiller.getZoom()/2);
+            }
+            else{
+            areaFiller.fill(canvas,areaFiller.getZoom()*2);
+            }
+        }); 
+       
         areaFiller.fill( canvas, 100);
         Group root = new Group( canvas );
         Scene scene = new Scene(root);
