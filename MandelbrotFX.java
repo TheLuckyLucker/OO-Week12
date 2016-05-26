@@ -43,4 +43,5 @@ public class MandelFX extends Application {
         launch(args);
     }
     
+    
 }
