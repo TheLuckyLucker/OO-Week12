@@ -11,7 +11,6 @@ package mandelbrotfx;
  */
 public class Area {
     
-    private int[][] mandelGetallen;
     private final double width, height;
     private final double startX, startY;
     
@@ -28,13 +27,6 @@ public class Area {
     public double getHeight ()  { return height; }
     
         
-    public Area zoom (int xul, int yul, int zw, int zh, int tw, int th) {
-        double zoom_fact = ((double) zw) / tw;
-        return new Area (startX + (width  * xul) / tw,
-                         startY - (height * yul) / th,
-                         width * zoom_fact,
-                         height * zoom_fact);
-    }
-    
+
 
 }

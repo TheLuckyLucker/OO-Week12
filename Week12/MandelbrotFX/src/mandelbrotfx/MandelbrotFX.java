@@ -5,6 +5,7 @@
  */
 package mandelbrotfx;
 
+import java.awt.TextField;
 import java.awt.event.MouseEvent;
 import java.beans.EventHandler;
 import javafx.application.Application;
@@ -34,7 +35,7 @@ public class MandelbrotFX extends Application {
 
     private Scene makeScene() {
         canvas = new Canvas(GRID_WIDTH, GRID_HEIGHT);
-        
+ 
         canvas.setFocusTraversable(true);
         
         canvas.setOnKeyPressed(event -> {  
@@ -53,10 +54,11 @@ public class MandelbrotFX extends Application {
                 areaFiller.fill(canvas, areaFiller.getZoom()/2);
             }
             else{
-            areaFiller.fill(canvas,areaFiller.getZoom()*2);
+                areaFiller.fill(canvas,areaFiller.getZoom()*2);
+                
             }
         }); 
-       
+        
         areaFiller.fill( canvas, 100);
         Group root = new Group( canvas );
         Scene scene = new Scene(root);

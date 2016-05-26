@@ -58,6 +58,18 @@ public class AreaFiller {
 
     }  
     
+    public void zoom(double posX, double posY, int zoom){
+        double width = area.getWidth() / zoom;
+        double height = area.getHeight() / zoom;
+        area = new Area(
+                area.getX() + (posX / 800) * width - width / 2,
+                area.getY() + (posY / 800) * height - height / 2,
+                width,
+                height
+        );
+    }
+    
+    
     public int getZoom(){
         return this.zoomfactor;
     }
